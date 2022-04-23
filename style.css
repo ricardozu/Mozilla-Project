@@ -1,0 +1,666 @@
+/*
+1.Posicionamiento --> (static, absolute, relative, fixed).
+Modelo de caja (Box model) --> margin, border, padding, content
+Tipografía --> tipos, tamaños de fuente, etc
+Estilos visuales --> box-shadow, border-radius, gradient, etc
+Otros --> reglas CSS y más
+
+*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+ /*Colores*/
+ --title-color: #271948;
+ --buton-firefox:#0060df;
+ --second-section: #ededf0; 
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    min-height: 64px;
+    justify-content: center;
+    box-shadow: 0 0 1px 1px rgb(29 17 51 / 4%), 0 0 3px 2px rgb(9 32 77 / 12%), 0 0 2px -3px rgb(29 17 51 / 12%);
+}
+
+.header .header__nav-container{
+    display: none;
+}
+
+
+.header .header__navegation-container{
+    display: flex;
+    width: 280px;
+    height: 32px;
+    justify-content:flex-end; 
+    margin-top: 15px;
+}
+
+.header__logo{
+    background-image: url('https://www.mozilla.org/media/protocol/img/logos/mozilla/logo-word-hor.e20791bb4dd4.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 112px;
+    height: 32px;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.header__menu{
+    background-image: url('./assets/icon/menuLogo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.header__download{
+    display: none;
+}
+
+.first__container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1312px;
+    min-height: 342px;
+    margin: 0 auto;
+    padding: 48px 0;
+    text-align: center;
+}
+
+.main__container{
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 304px;
+    padding: 0 24px;
+}
+
+.main__container-img{
+    display: none;
+}
+
+.first__container h1{
+    font-family:'Metropolis', sans-serif; 
+    font-size: 4.9rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: 15px;
+
+}
+
+.botton__container{
+    width: 100%;
+    height: 48px;
+    justify-content: center;
+}
+
+.top__botton {
+   width: 227px;
+   height: 48px;
+   text-align: center;
+   padding: 10px 24px;
+   font-size: 1.6rem;
+   font-weight: 700;
+   line-height: 1.5;
+   color: white; 
+   border: none;
+   border-radius: 4px;
+   background-color: var(--buton-firefox);
+   
+}
+
+.second__container{
+    /*Para que el dino se pueda posicionar.*/
+    position: relative;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.top{
+    margin-top: 90px;
+    padding: 48px 24px;
+    min-height: 650px;
+}
+
+.company__dino-logo{
+    position: absolute;
+    width: 250px;
+    height: 190.3px;
+    top: -80px;
+    left: calc(50% - (250px / 2));
+    background-image: url('./assets/images/dino.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ .main__company-description{
+    /*Para que el dino se pueda posicionar.*/
+    width: 100%;
+    min-width: 270px;
+    min-height: auto;
+    background-color: var(--second-section);
+}
+
+.company__title{
+    width: 100%;
+    text-align: center;
+    font-family:'Zilla Slab', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: black;
+    padding-top: 95px;
+}
+
+.company__explain{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    font-weight: 300;
+    padding-bottom: 65px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.mid{
+    padding: 10px 24px;
+    margin-bottom: 30px; 
+}
+
+.second__container-influency, .second__container-innovation{
+    width: 100%;
+    min-width: 270px;
+    min-height: auto;
+}
+
+
+.company__titlle-influency, .company__titlle-innovation{
+    font-size: 2.4rem;
+    font-family:'Zilla Slab', serif;
+    margin-bottom: 25px;
+}
+
+.company__explain-influency, .company__explain-innovation{
+    font-size: 1.7rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.company__list-influency, .company__list-innovation{
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-left: 32px;
+    text-decoration: underline;
+    
+}
+
+.third__container-slider{
+    display: flex;
+    min-height: 390px;
+    /*Agregar el scroll horizontal para las tarjetas*/
+    overflow-x:scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type:x proximity;
+    margin-top: 30px;
+}
+
+.mid__low{
+    padding: 10px 24px; 
+}
+
+.container__card{
+    position: relative;
+    /*Para separar las cards*/
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 100px 5px 0;
+
+}
+
+.card__logo-extensiones{
+    position: absolute;
+    top: -90px;
+    left: calc(50% - (100px / 2 ));
+    padding: 10px;
+    margin-top: 15px;
+    background-image: url('./assets/images/papel.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 102px;
+}
+
+.card__logo-empleos{
+    position: absolute;
+    top: -90px;
+    left: calc(50% - (100px / 2 ));
+    padding: 10px;
+    margin-top: 15px;
+    background-image: url('./assets/images/person.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 102px;
+}
+
+.card__logo-help{
+    position: absolute;
+    top: -90px;
+    left: calc(50% - (100px / 2 ));
+    padding: 10px;
+    margin-top: 15px;
+    background-image: url('./assets/images/salvavidas.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 102px;
+}
+.container__card .card__text-container{
+    text-align: center;
+}
+
+.container__card .card__text-container h3{
+    padding-top: 35px;
+    margin-bottom: 5px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family:'Zilla Slab', serif;
+}
+
+.text__extensiones{
+    text-decoration: underline solid #b833e1;
+}
+.text__empleos{
+    text-decoration: underline solid #0060df;
+}
+.text__extensiones{
+    text-decoration: underline solid #b833e1;
+}
+
+.container__card .card__text-container p{
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.fourth__container{
+    width: 100%;
+    max-width: 716px;
+    /*Para que siempre este alineado al centro el contenido*/
+    margin: 0 auto;
+    min-height:250px;
+    margin-top: 250px;
+    margin-bottom: 60px;
+}
+
+.container__card-Amor{
+    position: relative;
+}
+
+.card_img{
+    position: absolute;
+    top: -250px;
+    left: calc(50% - (272px / 2));
+    background-image: url('./assets/images/wallpaper.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 272px;
+    height: 272px;
+}
+
+
+.fourth__container h3{
+    font-size: 3.8rem;
+    font-family:'Zilla Slab', serif;
+    margin-bottom: 10px;
+}
+
+
+.fourth__container p{
+   font-size: 1.5rem;
+   line-height: 1.5;
+   font-weight: 300;
+
+}
+
+.fourth__container .card__title-input{
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.fourth__container input{
+    width: 272px;
+    height: 40px;
+    border: 2px solid #9595a2;
+    border-radius: 4px;
+    line-height: 1.25;
+    /*Le agrega padding dentro del input*/
+    padding: 8px;
+    margin-bottom: 25px;
+}
+
+.fourth__container .container__card-Amor .low__button{
+    width: 272px;
+    height: 40px;
+    text-align: center;
+    background-color: black;
+    border: 0;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    min-height:500px;
+    background-color: black;
+    color: white;
+}
+
+footer .footer__container{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 45px;
+    
+}
+
+footer .footer__logo{
+    width: 272px;
+    height: 38.4px;
+    /*Separar el logo de la tabla*/
+    margin-bottom: 32px;
+}
+
+.logo__mozilla{
+    /*Como es un span, debe colocarse el display para que el mismo se pueda ver*/
+    display: inline-block;
+    background-image: url('./assets/images/logo_white.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 32px;
+    
+}
+
+/* .table__container{
+    width: 90%;
+    min-width: 270px;
+    max-width: 320px;
+    height: 280px;
+    
+}
+/*Para que la tabla utilice todo el espacio de su contenedor padre (table__container)
+.table__container table{
+    width: 100%;
+    height: 100%;
+}
+
+.plus{
+    display: inline-block;
+    background-image: url('./assets/icon/plus.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+}
+
+.table__container td  {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.table__container .left{
+    position: relative;
+    text-align: left;
+}
+
+.table__container .right{
+    position: relative;
+    text-align: right;
+}
+*/
+
+.container__desplegables{
+    /*Ocupe el 100% del tamano de la pantalla*/
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Contenedor del menu desplegable (acordeon)*/
+
+.container__desplegables details{
+    /*Ocupe el 100% del tamano de la pantalla*/
+    width: 100%;
+    min-width: 272px;
+    margin-bottom: 35px;
+    /*Para poder poner el icono del + en el desplegable*/
+    position: relative;
+}
+
+/*Modificar la flechita que viene por defecto con el acordeon*/
+.container__desplegables summary::before{
+    /*Para que se pueda ver la imagen*/
+    position: absolute;
+    /*Cambiar la imagen*/
+    content: url('./assets/icon/minus.svg');
+    left:250px;
+}
+
+.container__desplegables summary{
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+    cursor: pointer;
+    list-style: none;
+}
+
+/*Para que el icono cambie cuando esta abierto*/
+.container__desplegables details[open] summary::before{
+    content: 'X';
+    font-size: 2rem;
+    top: -8px;
+
+}
+
+.container__desplegables details[open]{
+    /*Halla espacio cuando se abre el acordeon*/
+    margin-bottom: 50px;
+}
+
+
+
+
+.container__desplegables details ul{
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5; 
+    margin-top: 25px;
+}
+
+.container__desplegables details li{
+    margin-top: 10px;
+    list-style: none;
+}
+
+.container__desplegables  details a{
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+footer h5{
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.container__social{
+    margin-top: 30px;
+    width: 272px;
+    min-height:150px ;
+}
+
+.footer__social{
+    width: 272px;
+    min-height:50px;
+    margin-bottom: 25px;
+}
+
+
+footer .footer__social .social__icon{
+    display: flex;
+    width: 272px;
+    height: 24px;
+}
+
+.social__icon .twitter{
+    display: inline-block;
+    background-image: url('./assets/icon/twitter.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 16px;
+    height: 17px;
+    margin-right: 20px;
+}
+
+.social__icon .instagram{
+    display: inline-block;
+    background-image: url('./assets/icon/instagram.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 16px;
+    height: 17px;
+    margin-right: 20px;
+}
+
+.social__icon .youtube{
+    display: inline-block;
+    background-image: url('./assets/icon/youtube.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 16px;
+    height: 17px;
+    margin-right: 20px;
+}
+
+.container__info{
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+.info__section-container a{
+    color: white;
+    text-decoration: underline;
+
+}
+
+.section__list{
+    list-style: none;
+    display: block; 
+    margin-bottom: 30px;
+}
+
+.section__list li{
+    display: inline-block;
+    padding: 0px 24px 16px 0;
+}
+
+.lenguaje{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.info__underline{
+    text-decoration: underline;
+}
+
+.info__section-container p{
+    line-height: 1.5;
+}
+
+.container__info select{
+    font-size: 1.1rem;
+    width: 175.6px;
+    height: 38px;
+    border: 2px solid #9595a2;
+    border-radius: 4px;
+    padding:8px calc(1.5em + 16px) 8px 8px ;
+    margin-bottom: 25px;
+}
+
+.container__info select:active:hover{
+    border: 2px solid #0250bb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

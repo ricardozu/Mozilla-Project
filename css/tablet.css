@@ -1,0 +1,84 @@
+
+.header .header__navegation-container{
+    width: 432px;
+    height: 32px;
+    padding: 16px 24px;
+    margin-top: 0;
+
+}
+
+.main__body .top__title-container{
+    font-size: 56px;
+}
+
+.top{
+    padding: 48px 44px;
+}
+
+.botton__container{
+    padding: 15px;
+}
+
+.mid{
+    padding: 5px 64px;
+}
+.main__body .top__botton{
+    padding: 15px 30px;
+}
+
+.main__company-description h2{
+    font-size: 40px;
+}
+
+.main__company-description{
+    padding: 24px 50px;
+}
+
+.main__company-influency p{
+    margin-bottom: 25px;
+}
+
+.main__company-influency li{
+    margin-bottom: 5px;
+}
+
+.main__company-innovation p{
+    margin-bottom: 25px;
+}
+
+.main__company-innovation li{
+    margin-bottom: 5px;
+
+}
+
+.container__text{
+    text-align: center;
+}
+.container__desplegables details{
+    width: 50%;
+    text-align: center;
+    min-width: 150px;
+    margin-bottom: 35px;
+    /*Para poder poner el icono del + en el desplegable*/
+    position: relative;
+}
+
+
+/*Para que no aparezca el inoco*/
+
+.container__desplegables summary{
+    list-style: none;
+    font-weight: 700;
+}
+
+.container__desplegables details[open] summary::before{
+    content: '';
+}
+
+.container__desplegables summary::before{
+    content: '';
+
+}
+
+
+

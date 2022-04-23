@@ -1,0 +1,171 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center; 
+    justify-content: center;
+}
+
+.header .header__navegation-container{
+    display: flex;
+    width: 810px;
+    height: 56.5px;
+}
+
+.header__menu{
+    display: none;
+}
+
+.header__download{
+    display: block;
+    color: #0060DF;
+    font-size: 1.35rem;
+    font-weight: 700;
+    width: 168px;
+    height: 33px;
+    padding: 6px 24px;
+    border: 2px solid #0060DF;
+    border-radius: 5px;
+}
+
+.header .header__nav-container{
+    display: flex;
+    align-items: flex-end;
+    width: 485px;
+    height: 56.5px;
+    padding: 0 0 15px 15px;
+}
+
+.header .header__nav-container .nav__list{
+    text-decoration: none;
+}
+
+.header .header__nav-container .nav__list li{
+    display: inline-block;
+    list-style: none;
+}
+
+.header .header__nav-container .nav__list a{
+    padding: 0px 8px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+}
+
+ .top{
+     padding: 48px 64px;
+ }
+.first__container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    padding: 48px 24px;
+}
+
+.first__container h1{
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.main__body .top__title-container{
+    font-size: 6.5rem;
+}
+
+.first__container .botton__container{
+    padding: 0;
+    margin-top: -15px;
+}
+
+.main__container{
+    width: 45%;
+}
+
+.main__container .main__body{
+    margin-left: -4px;
+    margin-right: 0;
+    padding-left: 24px;
+    text-align: left;
+    font-size: 6rem;
+}
+
+.main__container-img{
+    display: flex;
+    width: 55%;
+}
+
+.main__container-img span{
+    position: absolute;
+    background-image: url('/mozilla/assets/images/image.png');
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    width: 289px;
+    max-width: 600px;
+    height: 256px;
+    max-height: 532px;
+}
+
+.second__container {
+    margin-top: 15px;
+}
+
+.main__company-description{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.company__dino-logo{
+    position: absolute;
+    top: 80px;
+    left: 95px;
+}
+
+
+.company__text-container{
+    width: 50%;
+}
+
+.main__company-description h2{
+    padding-top: 0;
+    font-size: 4.5rem;
+}
+
+.third__container-slider{
+    justify-content: center;
+}
+
+.fourth__container{
+    margin-top: 20px;
+}
+
+.fourth__container h3{
+    font-size: 5rem;
+}
+
+.container__card-Amor{
+    display: flex;
+}
+
+.container_card{
+    width: 50%;
+}
+
+.card_img{
+    top: -47px;
+    left: 20px;
+}
+
+.container__text{
+    width: 50%;
+}
+
+.mid__low{
+    padding: 48px 64px;
+}
+
+.container__info{
+    padding: 45px 0 0 0;
+    border-top: 1px solid #3a3a52;
+}
+
